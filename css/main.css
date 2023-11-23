@@ -53,7 +53,7 @@ nav.gnb.on {width: 400px; left:0;}
 /* contents */
 .contents {background: #fff; position: relative; z-index: 1;margin-bottom: 200px;}
 .contents .visual {width: 100vw; height: 100vh; position: relative;} 
-.contents .visual .waves {width: 100vw; height: 100vh; object-fit: cover; position: absolute; left: 0; top: 0;}
+.contents .visual .moon {width: 100vw; height: 100vh; object-fit: cover; position: absolute; left: 0; top: 0;}
 /* object-fit: img나 video등의 콘텐츠 크기 맞추는 방식, cover는 가로 세로비를 유지하면서 요소를 가득채움 */
 
 .contents .visual .title {width: 100%; position: absolute; left: 0; top: 50%;
