@@ -77,9 +77,10 @@ $(document).on('click','a[href="#"]',function(e){
 
 ***  
 -  jQuery를 사용하여 화면에 나타나는 요소에 스크롤 애니메이션 효과를 부여하는 역할을 합니다.
-  + $(function() {...}): HTML 문서가 완전히 로드되면 실행될 함수를 정의합니다. 이는 jQuery에서 문서가 준비되었을 때 코드를 실행하는 관례적인 방법입니다.
-  + $('.animate').scrolla({...}): 클래스가 "animate"로 지정된 요소들을 대상으로 scrolla 플러그인을 적용합니다. Scrolla는 스크롤 애니메이션을 제공하는 jQuery 플러그인 중 하나입니다.
-  + mobile: true, once: false: scrolla 플러그인에 옵션을 설정합니다. 여기서는 mobile을 true로 설정하여 모바일에서도 애니메이션이 동작하도록 하고, once를 false로 설정하여 애니메이션이 한 번만 실행되지 않도록 합니다.
+   + $(function() {...}): HTML 문서가 완전히 로드되면 실행될 함수를 정의합니다. 이는 jQuery에서 문서가 준비되었을 때 코드를 실행하는 관례적인 방법입니다.
+   + $('.animate').scrolla({...}): 클래스가 "animate"로 지정된 요소들을 대상으로 scrolla 플러그인을 적용합니다. Scrolla는 스크롤 애니메이션을 제공하는 jQuery 플러그인 중 하나입니다.
+   + mobile: true, once: false: scrolla 플러그인에 옵션을 설정합니다. 여기서는 mobile을 true로 설정하여 모바일에서도 애니메이션이 동작하도록 하고, once를 false로 설정하여 애니메이션이 한 번만 실행되지 않도록 합니다.
+     
   ```
  $(function(){
     $('.animate').scrolla({
