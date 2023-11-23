@@ -2,7 +2,8 @@
 - 여행 사이트 메인페이지 반응형 웹사이트 
 - HTML, CSS, JavaScript, jQuery 를 사용하여 스크롤시 애니메이션,
   디자인이 변경되는 헤더와 이미지 애니메이션, 글자별 텍스트 애니메이션,
-  GNB 오픈메뉴 구현 반응형 웹사이트 입니다. 
+  GNB 오픈메뉴 구현
+- max-wirdth: 1400px, 1024px, 768px, 500px 반응형 웹사이트   
 ***
 ## 구현 화면
 ![반응형_커버](https://github.com/lcl3392/Responsive_Website/assets/133613544/91b9ee69-9e66-4d48-baee-dbd989e19498)
@@ -120,4 +121,17 @@ $(document).on('click','a[href="#"]',function(e){
       });
   });
   ``` 
+***
+## max-wirdth: 1400px, 1024px, 768px, 500px 반응형
+- 1400px
+  ![1400](https://github.com/lcl3392/Responsive_Website/assets/133613544/87f71372-2aca-493d-8715-de8c62ac8c16)
+***
+- 1024px
+  ![1024](https://github.com/lcl3392/Responsive_Website/assets/133613544/dc773c4c-d1e0-420c-836f-5d9b61ba0fd2)
+***
+- 768px
+  ![768](https://github.com/lcl3392/Responsive_Website/assets/133613544/63b31231-a032-4eab-8f68-d897e26a739d)
+***
+- 500px
+  ![500](https://github.com/lcl3392/Responsive_Website/assets/133613544/70a80e42-f865-4c84-b0c8-4cf120460ca2)
 
