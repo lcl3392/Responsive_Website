@@ -10,9 +10,10 @@
 ## code 설명 
 
 - 문서가 로드될 때부터 href 속성이 "#"인 모든 앵커의 클릭 동작을 막아서 해당 앵커들이 페이지 내에서의 이동을 방지합니다.
- + $(document).on('click', 'a[href="#"]', function(e) {...}): 문서 객체 모델(DOM)이 로드되면서, 모든 <a> 요소 중에서 href 속성 값이 "#"인 것들에 대한 클릭 이벤트 핸들러를 등록합니다.
- + function(e) {...}: 클릭 이벤트가 발생했을 때 실행되는 함수를 정의합니다. e는 이벤트 객체를 나타냅니다.
- + e.preventDefault();: 클릭 이벤트에서 e.preventDefault()를 호출하여 브라우저가 해당 앵커의 기본 동작을 수행하지 않도록 막습니다. 여기서는 앵커가 클릭되었을 때 브라우저가 해당 앵커의 "#"로 이동하는 동작을 막습니다.
+  + $(document).on('click', 'a[href="#"]', function(e) {...}): 문서 객체 모델(DOM)이 로드되면서, 모든 <a> 요소 중에서 href 속성 값이 "#"인 것들에 대한 클릭 이벤트 핸들러를 등록합니다.
+  + function(e) {...}: 클릭 이벤트가 발생했을 때 실행되는 함수를 정의합니다. e는 이벤트 객체를 나타냅니다.
+  + e.preventDefault();: 클릭 이벤트에서 e.preventDefault()를 호출하여 브라우저가 해당 앵커의 기본 동작을 수행하지 않도록 막습니다. 여기서는 앵커가 클릭되었을 때 브라우저가 해당 앵커의 "#"로 이동하는 동작을 막습니다.
+    
  ```
 $(document).on('click','a[href="#"]',function(e){
     e.preventDefault();
@@ -21,13 +22,14 @@ $(document).on('click','a[href="#"]',function(e){
 ***
 
 -  페이지를 스크롤하거나 창의 크기를 조절할 때 발생하는 이벤트에 따라 여러 가지 효과를 적용하는 역할을 합니다.
-  + $(window).on('scroll resize', function() {...}): 윈도우 객체에 스크롤 또는 리사이즈 이벤트가 발생하면 실행될 함수를 등록합니다.
-  + var scrollPos = 0;: 스크롤 위치를 저장할 변수 scrollPos를 초기화합니다.
-  + scrollPos = $(document).scrollTop();: 현재 스크롤 위치를 scrollTop() 메서드를 사용하여 가져와서 scrollPos에 저장합니다.
-  + fix();, fixHeader();, fixList();: 각각 fix(), fixHeader(), fixList() 함수를 호출합니다.
-  + function fix() {...}: 스크롤 위치에 따라 .fix .text 요소에 on 클래스를 추가 또는 제거하여 효과를 줍니다.
-  + function fixHeader() {...}: 스크롤 위치에 따라 header 요소에 on 클래스를 추가 또는 제거하여 효과를 줍니다.
-  + function fixList() {...}: 스크롤 위치에 따라 section.approach .inner .list li a 요소 중에서 특정 위치에 해당하는 것에 on 클래스를 추가하고, 다른 위치에 해당하는 것에는 on 클래스를 제거하여 리스트에 효과를 줍니다.
+   + $(window).on('scroll resize', function() {...}): 윈도우 객체에 스크롤 또는 리사이즈 이벤트가 발생하면 실행될 함수를 등록합니다.
+   + var scrollPos = 0;: 스크롤 위치를 저장할 변수 scrollPos를 초기화합니다.
+   + scrollPos = $(document).scrollTop();: 현재 스크롤 위치를 scrollTop() 메서드를 사용하여 가져와서 scrollPos에 저장합니다.
+   + fix();, fixHeader();, fixList();: 각각 fix(), fixHeader(), fixList() 함수를 호출합니다.
+   + function fix() {...}: 스크롤 위치에 따라 .fix .text 요소에 on 클래스를 추가 또는 제거하여 효과를 줍니다.
+   + function fixHeader() {...}: 스크롤 위치에 따라 header 요소에 on 클래스를 추가 또는 제거하여 효과를 줍니다.
+   + function fixList() {...}: 스크롤 위치에 따라 section.approach .inner .list li a 요소 중에서 특정 위치에 해당하는 것에 on 클래스를 추가하고, 다른 위치에 해당하는 것에는 on 클래스를 제거하여 리스트에 효과를 줍니다.
+     
   ```
   $(window).on('scroll resize', function(){
     var scrollPos = 0;
@@ -92,6 +94,7 @@ $(document).on('click','a[href="#"]',function(e){
 - 이 코드는 페이지가 로드될 때 Splitting.js를 초기화하여 텍스트를 분할하고, 분할된 각 부분에 대한 스타일을 적용할 수 있도록 하는 것입니다. 
   + $(function(){...});: HTML 문서가 완전히 로드되면 실행될 함수를 정의합니다. 이는 jQuery에서 문서가 준비되었을 때 코드를 실행하는 관례적인 방법입니다.
   + Splitting();: Splitting.js 라이브러리의 초기화 함수를 호출합니다. Splitting.js는 텍스트를 문자 또는 단어로 분할(splitting)하여 각 문자 또는 단어에 대한 스타일링이 가능하도록 해주는 라이브러리입니다.
+    
   ```
   $(function(){Splitting();});
   ```
@@ -102,6 +105,7 @@ $(document).on('click','a[href="#"]',function(e){
   + $('header .gnbBtn').on('click', function(){...});: 페이지 상단의 헤더(header)에서 클래스가 'gnbBtn'인 요소가 클릭되었을 때 실행될 함수를 정의합니다. 해당 함수는 헤더 내비게이션(nav.gnb)에 'on' 클래스를 토글(toggle)합니다.
   + $('.contents').on('click', function(){...});: 클래스가 'contents'인 요소가 클릭되었을 때 실행될 함수를 정의합니다. 해당 함수는 헤더 내비게이션(nav.gnb)에서 'on' 클래스를 제거합니다.
   + $('nav.gnb .gnbBtn_shut span').on('click', function(){...});: 내비게이션(nav.gnb) 내부에서 클래스가 'gnbBtn_shut'인 하위 요소인 span이 클릭되었을 때 실행될 함수를 정의합니다. 해당 함수는 헤더 내비게이션(nav.gnb)에 'on' 클래스를 토글합니다.
+    
   ```
   $(function(){
     $('header .gnbBtn').on('click', function(){
