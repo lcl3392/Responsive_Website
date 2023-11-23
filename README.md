@@ -130,8 +130,12 @@ $(document).on('click','a[href="#"]',function(e){
   ![1024](https://github.com/lcl3392/Responsive_Website/assets/133613544/dc773c4c-d1e0-420c-836f-5d9b61ba0fd2)
 ***
 - 768px
-  ![768](https://github.com/lcl3392/Responsive_Website/assets/133613544/63b31231-a032-4eab-8f68-d897e26a739d)
+  
+  ![768](https://github.com/lcl3392/Responsive_Website/assets/133613544/027a4f96-c913-4296-baea-bf337c508dac)
 ***
 - 500px
-  ![500](https://github.com/lcl3392/Responsive_Website/assets/133613544/70a80e42-f865-4c84-b0c8-4cf120460ca2)
+  
+  ![500](https://github.com/lcl3392/Responsive_Website/assets/133613544/8d2b529c-4d8e-4b0f-a4ec-625f6adf18a9)
+
+  
 
